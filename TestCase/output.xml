@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.6 on win32)" generated="2025-03-01T17:04:02.111694" rpa="false" schemaversion="5">
+<suite id="s1" name="Ex1" source="C:\Users\Nuis-Pc\Desktop\Test Robot\TestCase\ex1.robot">
+<test id="s1-t1" name="TC-01 Test Open Browser login" line="7">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-03-01T17:04:02.361855" elapsed="0.000996"/>
+</kw>
+<kw name="launchBrowser" owner="getKeywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-01T17:04:02.362851" level="INFO">Opening browser 'edge' to base url 'https://admin-demo.nopcommerce.com/login?returnurl=%2Fadmin%2F'.</msg>
+<arg>${login-url}</arg>
+<arg>${environment}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-01T17:04:02.362851" elapsed="2.964847"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-01T17:04:05.327698" elapsed="0.533357"/>
+</kw>
+<msg time="2025-03-01T17:04:05.861055" level="INFO">${PageTitle} = None</msg>
+<var>${PageTitle}</var>
+<status status="PASS" start="2025-03-01T17:04:02.362851" elapsed="3.498204"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${PageTitle}NuiTEST</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-01T17:04:05.861557" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-03-01T17:04:02.361855" elapsed="3.499702"/>
+</test>
+<test id="s1-t2" name="TC-02 PassEmptry" line="13">
+<kw name="Login" owner="getKeywords">
+<kw name="Input username" owner="getKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-01T17:04:05.862555" level="INFO">Typing text 'admin@yourstore.com' into text field 'id:Email'.</msg>
+<arg>id:Email</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-01T17:04:05.862555" elapsed="1.596930"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2025-03-01T17:04:05.862555" elapsed="1.596930"/>
+</kw>
+<kw name="Input pwd" owner="getKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-01T17:04:07.459987" level="INFO">Typing text '' into text field 'id:Password'.</msg>
+<arg>id:Password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-01T17:04:07.459987" elapsed="1.547250"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2025-03-01T17:04:07.459485" elapsed="1.547752"/>
+</kw>
+<kw name="Click Login" owner="getKeywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-01T17:04:09.007237" level="INFO">Clicking button 'xpath=//*[@id="main"]/div/div/div/div[2]/div[1]/div/form/div[3]/button'.</msg>
+<arg>xpath=//*[@id="main"]/div/div/div/div[2]/div[1]/div/form/div[3]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-01T17:04:09.007237" elapsed="2.607169"/>
+</kw>
+<status status="PASS" start="2025-03-01T17:04:09.007237" elapsed="2.607169"/>
+</kw>
+<arg>admin@yourstore.com</arg>
+<arg>${EMPTY}</arg>
+<status status="PASS" start="2025-03-01T17:04:05.861557" elapsed="5.752849"/>
+</kw>
+<kw name="Error message Login ไม่ผ่าน" owner="getKeywords">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-03-01T17:04:14.266291" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-01T17:04:14.266291" level="FAIL">Page should have contained text 'Login was unsuccessful' but did not.</msg>
+<arg>Login was unsuccessful</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2025-03-01T17:04:11.615522" elapsed="2.653761">Page should have contained text 'Login was unsuccessful' but did not.</status>
+</kw>
+<status status="FAIL" start="2025-03-01T17:04:11.614406" elapsed="2.654877">Page should have contained text 'Login was unsuccessful' but did not.</status>
+</kw>
+<status status="FAIL" start="2025-03-01T17:04:05.861557" elapsed="8.407726">Page should have contained text 'Login was unsuccessful' but did not.</status>
+</test>
+<status status="FAIL" start="2025-03-01T17:04:02.112688" elapsed="12.157591"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Ex1">Ex1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
