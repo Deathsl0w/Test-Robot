@@ -78,3 +78,15 @@ TC-03 WrongPassword
 #     RetrivedExcelData  Data/GetItemsData.xlsx   10
     
 
+
+# TC-04 Wrongusername   
+#     Login   adm@yourstore.com      admin
+#     Error message Login ไม่ผ่าน
+
+# TC-05 WrongPassword&username
+#     Login  adm@yourstore.com     ${EMPTY}
+#     Error message Login ไม่ผ่าน
+
+# Tc-06 login Success
+#     Login    admin@yourstore.com    admin
+#     Welcome to Dashboard
