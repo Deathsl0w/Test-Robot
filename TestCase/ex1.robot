@@ -99,3 +99,17 @@ TestChangeBranches+
 +
 +
 +
+
+
+
+Test\
+
+Test
+Test
+TestTes
+
+
+Testset
+SeleniumLibrary.Get Selected List Values 	 locator=tz
+
+
