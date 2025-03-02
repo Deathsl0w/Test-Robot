@@ -14,9 +14,10 @@ TC-02 PassEmptry
     login   admin@yourstore.com     ${EMPTY}
     Error message Login ไม่ผ่าน
 
-# TC-03 WrongPassword   
-#     Login   admin@yourstore.com     zxc
-#     Error message Login ไม่ผ่าน
+TC-03 WrongPassword   
+    Login   admin@yourstore.com     zxc
+    Error message Login ไม่ผ่าน
+
 
 # TC-04 Wrongusername   
 #     Login   adm@yourstore.com      admin
